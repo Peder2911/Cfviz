@@ -1,0 +1,5 @@
+
+/srv/*
+!/srv/data/.gitkeep
+!/srv/apps/.gitkeep
+

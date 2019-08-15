@@ -1,0 +1,9 @@
+[submodule "Cfviz_Custodian"]
+	path = Cfviz_Custodian
+	url = https://github.com/Peder2911/Cfviz_Custodian
+[submodule "Cfviz_Server"]
+	path = Cfviz_Server
+	url = https://github.com/Peder2911/Cfviz_Server
+[submodule "Cfviz_Database"]
+	path = Cfviz_Database
+	url = https://github.com/Peder2911/Cfviz_Database

@@ -1,0 +1,23 @@
+
+version: '3'
+services:
+   server:
+      build: ./Cfviz_Server
+      ports:
+         - 8080:3838
+      volumes:
+         - .srv/apps:/srv/shiny-server/apps
+      links:
+         - db:database
+
+   custodian:
+      build: ./Cfviz_Custodian
+
+      volumes:
+         - .srv/data:/var/data
+      links:
+         - db:database
+
+   db:
+      build: ./Cfviz_Database
+
