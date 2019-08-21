@@ -4,7 +4,7 @@ services:
    server:
       build: ./Cfviz_Server
       ports:
-         - 80:3838
+         - 8080:3838
       volumes:
          - ./srv/apps:/srv/shiny-server/apps
       links:
@@ -15,6 +15,7 @@ services:
 
       volumes:
          - ./srv/data:/var/data
+         - ./srv/scripts:/var/scripts
       links:
          - db:database
 
