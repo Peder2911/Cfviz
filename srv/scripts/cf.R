@@ -109,6 +109,7 @@ function(cfs){
 
    cfs %>%
       group_by_at(names(cfs)[!names(cfs) %in% groupingVariables]) %>%
-      summarize(name = glue_collapse(unique(name), sep = ' - ')) %>%
+      summarize(name = glue_collapse(unique(name), sep = ' - '),
+                cat_bilateral = ifelse(n() > 1,'Multilateral','Unilateral')) %>%
       ungroup()
 }
