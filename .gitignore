@@ -1,6 +1,4 @@
 
 /srv/data/*
-/srv/apps/*
 !/srv/data/.gitkeep
-!/srv/apps/.gitkeep
 

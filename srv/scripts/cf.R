@@ -107,9 +107,10 @@ function(cfs){
          name = actor_name) 
    groupingVariables <- c('name')
 
-   cfs %>%
+   cfs <- cfs %>%
       group_by_at(names(cfs)[!names(cfs) %in% groupingVariables]) %>%
       summarize(name = glue_collapse(unique(name), sep = ' - '),
                 cat_bilateral = ifelse(n() > 1,'Multilateral','Unilateral')) %>%
       ungroup()
+   cfs[complete.cases(cfs),]
 }
